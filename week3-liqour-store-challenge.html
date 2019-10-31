@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <body onload="check_user_credentials()";  style="position: absolute;">
+    
+        <h1>Spiritueux Wines and Liqours</h1>
+        
+        <script>
+        function check_user_credentials(){
+            if (age_of_user() < 21)
+            alert ("You are too young to buy alcohol.");
+            if (user_email() === false )
+            alert ("Please enter a valid email");
+        }
+        function age_of_user (){
+            var age = prompt ("what is your age?");
+            return age;
+        }
+        function user_email (){
+            var email = prompt ("Enter your email");
+            var patt = new RegExp("@");
+            var res = patt.test(email);
+           
+            return res;
+        }
+//if user_email contains typeof "@" then it is true, all others are false
+        </script>
+        
+    </body>
+</html>
